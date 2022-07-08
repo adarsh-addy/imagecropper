@@ -1,6 +1,6 @@
 var imgurl;
-var cropped = document.getElementsByClassName("cropped"),
-  img_result = document.getElementsByClassName("img-result");
+// var cropped = document.getElementsByClassName("cropped"),
+//   img_result = document.getElementsByClassName("img-result");
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
@@ -28,6 +28,7 @@ function initCropper() {
     // get result to data uri
     imgurl = cropper.getCroppedCanvas().toDataURL();
     console.log(imgurl);
+    //showing the image
     var img1 = document.createElement("img");
     img1.src = imgurl;
     document.getElementById("cropped_result").appendChild(img1);
